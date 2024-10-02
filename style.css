@@ -1,0 +1,426 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #0f0716;
+  align-items: center;
+  padding: 1.5rem;
+  position: fixed;
+  border-bottom: solid white;
+  z-index: 400;
+}
+
+.logo {
+  align-items: center;
+  display: flex;
+  font-size: 28px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.nav ul {
+  display: flex;
+  gap: 4rem;
+}
+
+.nav ul li a {
+  color: white;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+.nav ul li a:hover {
+  color: #814def;
+}
+
+.icons i {
+  margin-right: 2rem;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.icons .fa-youtube {
+  color: red;
+}
+
+.icons .fa-facebook {
+  color: rgb(44, 44, 249);
+}
+
+.icons .fa-instagram {
+  color: deeppink;
+}
+.icons .fa-whatsapp {
+  color: green;
+}
+
+.menu {
+  display: none;
+}
+
+.media {
+  display: none;
+}
+
+/* 
+HEADER MEDIA */
+
+@media (max-width: 1148px) {
+  header .nav,
+  .icons {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .media {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    z-index: 500;
+    transform: translateY(-100vh);
+    transition: 1s;
+  }
+
+  .media ul li {
+    margin-top: 2rem;
+    font-size: 25px;
+  }
+
+  .media ul li a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 26px;
+  }
+
+  .media i {
+    margin-top: 2rem;
+  }
+
+  .media .fa-facebook {
+    color: blue;
+  }
+
+  .media .fa-instagram {
+    color: deeppink;
+  }
+
+  .media .fa-youtube {
+    color: red;
+  }
+
+  .media .fa-times {
+    position: absolute;
+    top: 2rem;
+    right: 4rem;
+    color: black;
+    font-size: 26px;
+  }
+
+  .responsive {
+    transform: none;
+    transition: 1s;
+  }
+}
+
+/* BACKGROUND */
+
+.background {
+  width: 100%;
+  height: 100vh;
+  background-color: #0f0716;
+}
+
+.background h3 {
+  padding-top: 12rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 26px;
+}
+
+.background h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 43px;
+  padding-left: 2rem;
+  color: #a297b9;
+}
+
+.background p {
+  padding-left: 2rem;
+  padding-top: 1.5rem;
+  font-size: 22px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.btn-icons {
+  margin-left: 2rem;
+  margin-top: 2rem;
+  display: flex;
+}
+
+/* From Uiverse.io by Danishrehman786 */
+button {
+  position: relative;
+  width: 180px;
+  height: 50px;
+  border: 2px solid #282828;
+  border-radius: 5px;
+  background-color: #212121;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5),
+    /* Outer shadow */ inset 0 1px 3px rgba(255, 255, 255, 0.3); /* Inner shadow */
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  border-radius: 5px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  z-index: 1;
+  transition: top 0.5s ease-in-out, bottom 0.5s ease-in-out;
+}
+
+button:hover::before {
+  top: 0;
+  bottom: 0;
+}
+
+button:hover {
+  background-color: #465243; /* Highlight color on hover */
+  color: #fff;
+  transform: translateY(-5px); /* Slight lift effect */
+}
+
+.download-button .label {
+  position: relative;
+  z-index: 10;
+}
+
+button .loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-image: linear-gradient(-225deg, #ff7402 0%, blue 50%, purple 100%);
+  filter: blur(20px);
+  z-index: -1;
+  animation: animate 0.8s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.btn-icons i {
+  margin-left: 2rem;
+  /* border: 1px solid white; */
+  padding: 0.5rem;
+  height: 2rem;
+  border-radius: 50%;
+  margin-top: 1rem;
+}
+
+.btn-icons .fa-facebook {
+  background-color: blue;
+  cursor: pointer;
+}
+
+.btn-icons .fa-instagram {
+  background-color: white;
+  color: deeppink;
+  cursor: pointer;
+}
+
+.btn-icons .fa-youtube {
+  background-color: red;
+  color: white;
+  cursor: pointer;
+}
+.btn-icons .fa-whatsapp {
+  background-color: green;
+  color: white;
+  cursor: pointer;
+}
+
+.background .profile-image {
+  width: 20rem;
+  height: 20rem;
+  background-color: #0e1215;
+  border-radius: 100%;
+  margin-left: 50rem;
+  margin-top: -20rem;
+}
+
+@media (max-width: 1253px) {
+  .background .profile-image {
+    margin-left: 2rem;
+    margin-top: 2rem;
+  }
+}
+@media (max-width: 494px) {
+  .background {
+    height: 110vh;
+  }
+  .background .profile-image {
+    margin-left: 2rem;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 503px) {
+  .btn-icons i {
+    left: -14rem;
+    position: relative;
+    top: 5rem;
+  }
+
+  .background .profile-image {
+    margin-left: 2rem;
+    margin-top: 7rem;
+  }
+}
+
+@media (max-width: 458px) {
+  .btn-icons i {
+    margin-left: 10rem;
+    position: absolute;
+    display: none;
+  }
+}
+@media (max-width: 364px) {
+  .background .profile-image {
+    width: 16rem;
+    height: 16rem;
+  }
+}
+@media (max-width: 308px) {
+  .background .profile-image {
+    width: 13rem;
+    height: 13rem;
+  }
+}
+
+.container {
+  width: 100%;
+  height: 24rem;
+  border-top: solid white;
+  text-align: center;
+}
+
+.box {
+  width: 20rem;
+  height: 15rem;
+  background-color: white;
+  display: inline-flex;
+  /* text-align: center; */
+  border-radius: 1rem;
+  position: relative;
+  margin-top: 4rem;
+  margin-left: 1rem;
+  animation: colorful 3s linear infinite;
+  border: 10px solid purple;
+}
+
+.container h1 {
+  padding-top: 4rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.box i {
+  color: black;
+  padding-top: 2rem;
+  padding-left: 10rem;
+  font-size: 25px;
+}
+
+@keyframes colorful {
+  60% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.box .text {
+  color: black;
+  margin-left: -10rem;
+}
+
+.box .text button {
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+
+@media (max-width: 1012px) {
+  .container {
+    height: 50rem;
+  }
+}
+
+@media (max-width: 675px) {
+  .box {
+    width: 18rem;
+  }
+
+  .container {
+    height: 67rem;
+  }
+}
+
+@media (max-width: 376px) {
+  .box {
+    width: 18rem;
+    height: 17rem;
+  }
+
+  .container {
+    height: 70rem;
+  }
+}
+
+@media (max-width: 316px) {
+  .box {
+    width: 15rem;
+  }
+
+ .box .text button {
+    margin-left: 0.5rem;
+  }
+}
